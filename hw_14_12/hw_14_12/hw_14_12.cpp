@@ -1,20 +1,404 @@
-﻿// hw_14_12.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
 #include <iostream>
+using namespace std;
+
+class Phone {
+private:
+    string brand;
+    string model;
+    int storageSizeGB;
+    string displayType;
+    bool isSmartphone;
+
+public:
+
+    void MakeCall(string phoneNumber)
+    {
+        cout << "Calling " << phoneNumber << "...\n";
+    }
+
+    void SendMessage(string message)
+    {
+        cout << "Sending message: " << message << "\n";
+    }
+
+    void TakePictures()
+    {
+        cout << "Taking a photo...\n";
+    }
+
+    void InstallApp(string appName)
+    {
+        cout << "Application installation: " << appName << "\n";
+    }
+
+    void PlatMusic()
+    {
+        cout << "Playing music...\n";
+    }
+
+    string GetBrand() const {
+        return brand;
+    }
+
+    string GetModel() const {
+        return model;
+    }
+
+    int GetStorageSizeGB() const {
+        return storageSizeGB;
+    }
+
+    string GetDisplayType() const {
+        return displayType;
+    }
+
+    bool GetIsSmartphone() const {
+        return isSmartphone;
+    }
+
+
+    void SetBrand(const string& brand) {
+        this-> brand = brand;
+    }
+
+    void setModel(const string& model) {
+        this-> model = model;
+    }
+
+    void SetStorageSizeGB(int storageSizeGB) {
+        this-> storageSizeGB = storageSizeGB;
+    }
+
+    void SetDisplayType(const string& displayType) {
+        this-> displayType = displayType;
+    }
+
+    void SetIsSmartphone(bool isSmartphone) {
+        this-> isSmartphone = isSmartphone;
+    }
+};
+
+
+class Pan {
+private:
+    string color;
+    string brand;
+    string tipType;
+    bool isClickable;
+    string inkType;
+
+public:
+
+    void Write(string text)
+    {
+        cout << "Writting: " << text << "\n";
+    }
+
+    void ChangeColor(string newColor)
+    {
+        cout << "Changing pen color to: " << newColor << "\n";
+    }
+
+    void Click()
+    {
+        if (isClickable)
+        {
+            cout << "Clicking the pen...\n";
+        }
+        else {
+            cout << "This pen cannot be clicked\n";
+        }
+    }
+
+    void TestPen()
+    {
+        cout << "Testing the pen...\n";
+    }
+
+    void RefillInk()
+    {
+        cout << "Refilling ink...\n";
+    }
+
+    string GetColor() const {
+        return color;
+    }
+
+    string GetBrand() const {
+        return brand;
+    }
+
+    string GetTipType() const {
+        return tipType;
+    }
+
+    bool GetIsClickable() const {
+        return isClickable;
+    }
+
+    string GetInkType() const {
+        return inkType;
+    }
+
+
+    void SetColor(const string& color) {
+        this-> color = color;
+    }
+
+    void SetBrand(const string& brand) {
+        this-> brand = brand;
+    }
+
+    void SetTipType(const string& tipType) {
+        this-> tipType = tipType;
+    }
+
+    void SetIsClickable(bool isClickable) {
+        this-> isClickable = isClickable;
+    }
+
+    void SetInkType(const string& inkType) {
+        this-> inkType = inkType;
+    }
+};
+
+
+class Laptop {
+private:
+    string brand;
+    string model;
+    int ramGB;
+    int hardDiskSize;
+    float screenSizeInches;
+
+public:
+
+    string GetBrand() const {
+        return brand;
+    }
+
+    string GetModel() const {
+        return model;
+    }
+
+    int GetRamGB() const {
+        return ramGB;
+    }
+
+    int GetHardDiskSize() const {
+        return hardDiskSize;
+    }
+
+    float GetScreenSizeInches() const {
+        return screenSizeInches;
+    }
+
+
+    void SetBrand(const string& brand) {
+        this-> brand = brand;
+    }
+
+    void SetModel(const string& model) {
+        this-> model = model;
+    }
+
+    void SetRamGB(int ramGB) {
+        this-> ramGB = ramGB;
+    }
+
+    void SetHardDiskSize(int hardDiskSize) {
+        this-> hardDiskSize = hardDiskSize;
+    }
+
+    void SetScreenSizeInches(float screenSizeInches) {
+        this-> screenSizeInches = screenSizeInches;
+    }
+
+    void PowerOn()
+    {
+        cout << "Powering on the laptop...\n";
+    }
+
+    void PowerOff()
+    {
+        cout << "Shutting down the laptop...\n";
+    }
+
+    void OpenApplication()
+    {
+        cout << "Opening application: ";
+    }
+
+    void PlayGame()
+    {
+        cout << "Playing game: ";
+    }
+
+    void InternetCheck()
+    {
+        cout << "There's an Internet check...\n";
+    }
+};
+
+
+class LEOController {
+private:
+    string model;
+    int batteryLevel;
+    unsigned long long colorCount;
+    const char* manufacturer;
+    int numberOfModes;
+
+public:
+
+    void TurnOn()
+    {
+        cout << "Turning on the LED controller...\n";
+    }
+
+    void TurnOff()
+    {
+        cout << "Turning off the LED controller...\n";
+    }
+
+    void ChangeColor(string color)
+    {
+        cout << "Changing color to " << color << "\n";
+    }
+
+    void switchMode(int mode) {
+        cout << "Switching to mode" << mode << "\n";
+    }
+
+    void changeBrightness(int level) {
+        cout << "Changing brightness to level " << level << "\n";
+    }
+
+
+    string GetModel() const {
+        return model;
+    }
+
+    int GetBatteryLevel() const {
+        return batteryLevel;
+    }
+
+    unsigned long long GetColorCount() const {
+        return colorCount;
+    }
+
+    const char* GetManufacturer() const {
+        return manufacturer;
+    }
+
+    int GetNumberOfModes() const {
+        return numberOfModes;
+    }
+
+
+    void SetModel(const string& model) {
+        this-> model = model;
+    }
+
+    void SetBatteryLevel(int batteryLevel) {
+        this-> batteryLevel = batteryLevel;
+    }
+
+    void SetColorCount(unsigned long long colorCount) {
+        this-> colorCount = colorCount;
+    }
+
+    void SetManufacturer(const char* manufacturer) {
+        this-> manufacturer = manufacturer;
+    }
+
+    void SetNumberOfModes(int numberOfModes) {
+        this-> numberOfModes = numberOfModes;
+    }
+};
+
+
+class Mouse {
+private:
+    string brand;
+    string model;
+    bool isWireless;
+    int batteryLevel;
+    int numberOfButtons;
+
+public:
+
+
+    void ClickLeftButton()
+    {
+        cout << "Left button clicked!\n";
+    }
+
+    void ClickRightButton()
+    {
+        cout << "Right button clicked!\n";
+    }
+
+    void scroll(int distance)
+    {
+        cout << "Scrolling by " << distance << " units\n";
+    }
+
+    void selectButtons(int numberOfButtons)
+    {
+        int buttons = numberOfButtons;
+        cout << "Mouse buttons set to " << numberOfButtons;
+    }
+
+    bool isWirelessConnected() const {
+        return isWireless;
+    }
+
+
+    string GetBrand() const {
+        return brand;
+    }
+
+    string GetModel() const {
+        return model;
+    }
+
+    bool GetIsWireless() const {
+        return isWireless;
+    }
+
+    int GetBatteryLevel() const {
+        return batteryLevel;
+    }
+
+    int GetNumberOfButtons() const {
+        return numberOfButtons;
+    }
+
+
+    void SetBrand(const string& brand) {
+        this-> brand = brand;
+    }
+
+    void SetModel(const string& model) {
+        this-> model = model;
+    }
+
+    void SetIsWireless(bool isWireless) {
+        this-> isWireless = isWireless;
+    }
+
+    void SetBatteryLevel(int batteryLevel) {
+        this-> batteryLevel = batteryLevel;
+    }
+
+    void SetNumberOfButtons(int numberOfButtons) {
+        this-> numberOfButtons = numberOfButtons;
+    }
+
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
