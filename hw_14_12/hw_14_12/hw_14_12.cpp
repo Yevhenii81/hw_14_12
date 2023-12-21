@@ -56,21 +56,20 @@ public:
         return isSmartphone;
     }
 
-
     void SetBrand(const string& brand) {
-        this-> brand = brand;
+        this->brand = brand;
     }
 
-    void setModel(const string& model) {
-        this-> model = model;
+    void SetModel(const string& model) {
+        this->model = model;
     }
 
     void SetStorageSizeGB(int storageSizeGB) {
-        this-> storageSizeGB = storageSizeGB;
+        this->storageSizeGB = storageSizeGB;
     }
 
     void SetDisplayType(const string& displayType) {
-        this-> displayType = displayType;
+        this->displayType = displayType;
     }
 
     void SetIsSmartphone(bool isSmartphone) {
@@ -140,25 +139,24 @@ public:
         return inkType;
     }
 
-
     void SetColor(const string& color) {
-        this-> color = color;
+        this->color = color;
     }
 
     void SetBrand(const string& brand) {
-        this-> brand = brand;
+        this->brand = brand;
     }
 
     void SetTipType(const string& tipType) {
-        this-> tipType = tipType;
+        this->tipType = tipType;
     }
 
     void SetIsClickable(bool isClickable) {
-        this-> isClickable = isClickable;
+        this->isClickable = isClickable;
     }
 
     void SetInkType(const string& inkType) {
-        this-> inkType = inkType;
+        this->inkType = inkType;
     }
 };
 
@@ -193,25 +191,24 @@ public:
         return screenSizeInches;
     }
 
-
     void SetBrand(const string& brand) {
-        this-> brand = brand;
+        this->brand = brand;
     }
 
     void SetModel(const string& model) {
-        this-> model = model;
+        this->model = model;
     }
 
     void SetRamGB(int ramGB) {
-        this-> ramGB = ramGB;
+        this->ramGB = ramGB;
     }
 
     void SetHardDiskSize(int hardDiskSize) {
-        this-> hardDiskSize = hardDiskSize;
+        this->hardDiskSize = hardDiskSize;
     }
 
     void SetScreenSizeInches(float screenSizeInches) {
-        this-> screenSizeInches = screenSizeInches;
+        this->screenSizeInches = screenSizeInches;
     }
 
     void PowerOn()
@@ -266,14 +263,13 @@ public:
         cout << "Changing color to " << color << "\n";
     }
 
-    void switchMode(int mode) {
+    void SwitchMode(int mode) {
         cout << "Switching to mode" << mode << "\n";
     }
 
-    void changeBrightness(int level) {
+    void ChangeBrightness(int level) {
         cout << "Changing brightness to level " << level << "\n";
     }
-
 
     string GetModel() const {
         return model;
@@ -295,25 +291,24 @@ public:
         return numberOfModes;
     }
 
-
     void SetModel(const string& model) {
-        this-> model = model;
+        this->model = model;
     }
 
     void SetBatteryLevel(int batteryLevel) {
-        this-> batteryLevel = batteryLevel;
+        this->batteryLevel = batteryLevel;
     }
 
     void SetColorCount(unsigned long long colorCount) {
-        this-> colorCount = colorCount;
+        this->colorCount = colorCount;
     }
 
     void SetManufacturer(const char* manufacturer) {
-        this-> manufacturer = manufacturer;
+        this->manufacturer = manufacturer;
     }
 
     void SetNumberOfModes(int numberOfModes) {
-        this-> numberOfModes = numberOfModes;
+        this->numberOfModes = numberOfModes;
     }
 };
 
@@ -328,7 +323,6 @@ private:
 
 public:
 
-
     void ClickLeftButton()
     {
         cout << "Left button clicked!\n";
@@ -339,21 +333,20 @@ public:
         cout << "Right button clicked!\n";
     }
 
-    void scroll(int distance)
+    void Scroll(int distance)
     {
         cout << "Scrolling by " << distance << " units\n";
     }
 
-    void selectButtons(int numberOfButtons)
+    void SelectButtons(int numberOfButtons)
     {
         int buttons = numberOfButtons;
         cout << "Mouse buttons set to " << numberOfButtons;
     }
 
-    bool isWirelessConnected() const {
+    bool IsWirelessConnected() const {
         return isWireless;
     }
-
 
     string GetBrand() const {
         return brand;
@@ -375,30 +368,101 @@ public:
         return numberOfButtons;
     }
 
-
     void SetBrand(const string& brand) {
-        this-> brand = brand;
+        this->brand = brand;
     }
 
     void SetModel(const string& model) {
-        this-> model = model;
+        this->model = model;
     }
 
     void SetIsWireless(bool isWireless) {
-        this-> isWireless = isWireless;
+        this->isWireless = isWireless;
     }
 
     void SetBatteryLevel(int batteryLevel) {
-        this-> batteryLevel = batteryLevel;
+        this->batteryLevel = batteryLevel;
     }
 
     void SetNumberOfButtons(int numberOfButtons) {
-        this-> numberOfButtons = numberOfButtons;
+        this->numberOfButtons = numberOfButtons;
     }
-
 };
 
 int main()
 {
+    //Тестирование класса Phone
+    Phone myPhone;
+    myPhone.SetBrand("Iphone");
+    myPhone.SetModel("11");
+    myPhone.SetStorageSizeGB(128);
+    myPhone.SetDisplayType("AMOLED");
+    myPhone.SetIsSmartphone(true);
 
+    cout << "Phone Details:\n";
+    cout << "Brand: " << myPhone.GetBrand() << "\n";
+    cout << "Model: " << myPhone.GetModel() << "\n";
+    cout << "Storage Size: " << myPhone.GetStorageSizeGB() << "GB" << "\n";
+    cout << "Display Type: " << myPhone.GetDisplayType() << "\n";
+    cout << "Is Smartphone? " << (myPhone.GetIsSmartphone() ? "Yes" : "No") << "\n";
+
+    // Тестирование класса Pan
+    Pan myPen;
+    myPen.SetBrand("Parker");
+    myPen.SetColor("Blue");
+    myPen.SetTipType("Ballpoint");
+    myPen.SetIsClickable(true);
+    myPen.SetInkType("Gel");
+
+    cout << "\nPen Details:\n";
+    cout << "Brand: " << myPen.GetBrand() << "\n";
+    cout << "Color: " << myPen.GetColor() << "\n";
+    cout << "Tip Type: " << myPen.GetTipType() << "\n";
+    cout << "Is Clickable? " << (myPen.GetIsClickable() ? "Yes" : "No") << "\n";
+    cout << "Ink Type: " << myPen.GetInkType() << "\n";
+
+    // Тестирование класса Laptop
+    Laptop myLaptop;
+    myLaptop.SetBrand("HP");
+    myLaptop.SetModel("HP ZBook 17 G3");
+    myLaptop.SetRamGB(16);
+    myLaptop.SetHardDiskSize(1000);
+    myLaptop.SetScreenSizeInches(17.3);
+
+    cout << "\nLaptop Details:\n";
+    cout << "Brand: " << myLaptop.GetBrand() << "\n";
+    cout << "Model: " << myLaptop.GetModel() << "\n";
+    cout << "RAM: " << myLaptop.GetRamGB() << "GB" << "\n";
+    cout << "Hard Disk Size: " << myLaptop.GetHardDiskSize() << "GB" << "\n";
+    cout << "Screen Size: " << myLaptop.GetScreenSizeInches() << " inches" << "\n";
+
+    // Тестирование класса LEOController
+    LEOController myLEOController;
+    myLEOController.SetModel("LEO-100");
+    myLEOController.SetBatteryLevel(80);
+    myLEOController.SetColorCount(16777216);
+    myLEOController.SetManufacturer("ABC Electronics");
+    myLEOController.SetNumberOfModes(5);
+
+    cout << "\nLEO Controller Details:\n";
+    cout << "Model: " << myLEOController.GetModel() << "\n";
+    cout << "Battery Level: " << myLEOController.GetBatteryLevel() << "%" << "\n";
+    cout << "Color Count: " << myLEOController.GetColorCount() << "\n";
+    cout << "Manufacturer: " << myLEOController.GetManufacturer() << "\n";
+    cout << "Number of Modes: " << myLEOController.GetNumberOfModes() << "\n";
+
+    // Тестирование класса Mouse
+    Mouse myMouse;
+    myMouse.SetBrand("Hator");
+    myMouse.SetModel("Pulsar Pro Wireless");
+    myMouse.SetIsWireless(true);
+    myMouse.SetBatteryLevel(70);
+    myMouse.SetNumberOfButtons(6);
+
+    cout << "\nMouse Details:\n";
+    cout << "Brand: " << myMouse.GetBrand() << "\n";
+    cout << "Model: " << myMouse.GetModel() << "\n";
+    cout << "Is Wireless? " << (myMouse.GetIsWireless() ? "Yes" : "No") << "\n";
+    cout << "Battery Level: " << myMouse.GetBatteryLevel() << "%" << "\n";
+    cout << "Number of Buttons: " << myMouse.GetNumberOfButtons() << "\n";
 }
