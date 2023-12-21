@@ -73,7 +73,7 @@ public:
     }
 
     void SetIsSmartphone(bool isSmartphone) {
-        this-> isSmartphone = isSmartphone;
+        this->isSmartphone = isSmartphone;
     }
 };
 
